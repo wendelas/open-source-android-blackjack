@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:scrollbars="vertical"
+	android:fadeScrollbars="false">
+			
+  <TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+ 
+   <RelativeLayout
+		  xmlns:android="http://schemas.android.com/apk/res/android"
+		  android:layout_width="wrap_content"
+		  android:layout_height="wrap_content">  
+	  
+	 	<ImageView
+	   		android:layout_alignParentTop="true"
+	  		android:layout_alignParentLeft="true"
+	   		android:src="@drawable/hitme"
+	   		android:layout_gravity="left" 
+			android:id="@+id/btnHitMe" 
+			android:layout_height="wrap_content" 
+			android:layout_width="wrap_content" 
+			android:onClick="hitMe"/>
+			
+		<ImageView
+	   		android:layout_alignParentTop="true"
+	   		android:layout_centerInParent="true"
+	   		android:src="@drawable/stand"
+	   		android:layout_gravity="center" 
+			android:id="@+id/btnStand" 
+			android:layout_height="wrap_content" 
+			android:layout_width="wrap_content" 
+			android:onClick="stand"/>
+	  	
+	  	<ImageView
+	  		android:layout_alignParentTop="true"
+	   		android:layout_alignParentRight="true"
+	   		android:layout_alignParentLeft="false"
+	   		android:src="@drawable/novo_jogo"
+	   		android:layout_gravity="right" 
+			android:id="@+id/btnNovo" 
+			android:layout_height="wrap_content" 
+			android:layout_width="wrap_content" 
+			android:onClick="novoJogo"/>
+		
+  </RelativeLayout>
+  
+  		
+  
+  <RelativeLayout
+		  xmlns:android="http://schemas.android.com/apk/res/android"
+		  android:layout_width="wrap_content"
+		  android:layout_height="wrap_content">  
+
+		<TextView android:text="@string/lblCartas_Banca"
+				android:layout_alignParentLeft="true"
+				android:id="@+id/textView1" 
+				style="@style/titulo"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"/>
+				
+		<TextView 
+				android:layout_alignParentRight="true"
+				android:text="" 
+				android:id="@+id/textViewPntBanca" 
+				style="@style/titulo"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"/>		
+  </RelativeLayout>
+  		
+  <LinearLayout
+		  xmlns:android="http://schemas.android.com/apk/res/android"
+		  android:layout_width="wrap_content"
+		  android:layout_height="wrap_content">
+		
+		<ImageView
+   		android:layout_alignParentBottom="true"
+   		android:layout_alignParentLeft="true"
+   		android:src="@drawable/verso"
+   		android:layout_gravity="left" 
+		android:id="@+id/img1Grid1" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"/>
+		
+		<ImageView
+   		android:layout_alignParentBottom="true"
+   		android:layout_alignParentLeft="true"
+   		android:src="@drawable/verso"
+   		android:layout_gravity="left" 
+		android:id="@+id/img2Grid1" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"/>
+		
+		<ImageView
+   		android:layout_alignParentBottom="true"
+   		android:layout_alignParentLeft="true"
+   		android:src="@drawable/verso"
+   		android:layout_gravity="left" 
+		android:id="@+id/img3Grid1" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"/>
+		
+		<ImageView
+   		android:layout_alignParentBottom="true"
+   		android:layout_alignParentLeft="true"
+   		android:src="@drawable/verso"
+   		android:layout_gravity="left" 
+		android:id="@+id/img4Grid1" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"/>
+		
+		<ImageView
+   		android:layout_alignParentBottom="true"
+   		android:layout_alignParentLeft="true"
+   		android:src="@drawable/verso"
+   		android:layout_gravity="left" 
+		android:id="@+id/img5Grid1" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"/>
+ </LinearLayout>				
+ <LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">		
+		
+		<ImageView
+   		android:layout_alignParentBottom="true"
+   		android:layout_alignParentLeft="true"
+   		android:src="@drawable/verso"
+   		android:layout_gravity="left" 
+		android:id="@+id/img6Grid1" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content" />
+		
+		<ImageView
+   		android:layout_alignParentBottom="true"
+   		android:layout_alignParentLeft="true"
+   		android:src="@drawable/verso"
+   		android:layout_gravity="left" 
+		android:id="@+id/img7Grid1" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content" />
+		<ImageView
+   		android:layout_alignParentBottom="true"
+   		android:layout_alignParentLeft="true"
+   		android:src="@drawable/verso"
+   		android:layout_gravity="left" 
+		android:id="@+id/img8Grid1" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"/>
+		
+		<ImageView
+   		android:layout_alignParentBottom="true"
+   		android:layout_alignParentLeft="true"
+   		android:src="@drawable/verso"
+   		android:layout_gravity="left" 
+		android:id="@+id/img9Grid1" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"/>
+		
+		<ImageView
+   		android:layout_alignParentBottom="true"
+   		android:layout_alignParentLeft="true"
+   		android:src="@drawable/verso"
+   		android:layout_gravity="left" 
+		android:id="@+id/img10Grid1" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content" />
+		
+		<!-- 
+		<GridView  xmlns:android="http://schemas.android.com/apk/res/android" 
+				    android:id="@+id/gridview1"
+				    android:layout_width="fill_parent" 
+				    android:layout_height="fill_parent"
+				    android:columnWidth="25dp"
+				    android:numColumns="auto_fit"
+				    android:verticalSpacing="5dp"
+				    android:horizontalSpacing="5dp"
+				    android:stretchMode="columnWidth"
+				    android:gravity="center"
+		 /> -->
+    	
+   </LinearLayout>			
+   
+   <RelativeLayout
+		  xmlns:android="http://schemas.android.com/apk/res/android"
+		  android:layout_width="wrap_content"
+		  android:layout_height="wrap_content">  
+
+		<TextView 
+				android:layout_alignParentLeft="true"
+				android:text="@string/lblSuas_Cartas"
+				android:id="@+id/textView2" 
+				style="@style/titulo"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"/>
+				
+		<TextView 
+				android:text=""
+				android:layout_alignParentRight="true"
+				android:id="@+id/textViewPntSuasCartas" 
+				style="@style/titulo"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"/>
+				
+  </RelativeLayout>
+  		
+  <LinearLayout
+		  xmlns:android="http://schemas.android.com/apk/res/android"
+		  android:layout_width="wrap_content"
+		  android:layout_height="wrap_content">
+		
+		
+		<ImageView
+   		android:layout_alignParentBottom="true"
+   		android:layout_alignParentLeft="true"
+   		android:src="@drawable/verso"
+   		android:layout_gravity="left" 
+		android:id="@+id/img1Grid2" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"/>
+		
+		<ImageView
+   		android:layout_alignParentBottom="true"
+   		android:layout_alignParentLeft="true"
+   		android:src="@drawable/verso"
+   		android:layout_gravity="left" 
+		android:id="@+id/img2Grid2" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"/>
+		
+		<ImageView
+   		android:layout_alignParentBottom="true"
+   		android:layout_alignParentLeft="true"
+   		android:src="@drawable/verso"
+   		android:layout_gravity="left" 
+		android:id="@+id/img3Grid2" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"/>
+		
+		<ImageView
+   		android:layout_alignParentBottom="true"
+   		android:layout_alignParentLeft="true"
+   		android:src="@drawable/verso"
+   		android:layout_gravity="left" 
+		android:id="@+id/img4Grid2" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"/>
+		
+		<ImageView
+   		android:layout_alignParentBottom="true"
+   		android:layout_alignParentLeft="true"
+   		android:src="@drawable/verso"
+   		android:layout_gravity="left" 
+		android:id="@+id/img5Grid2" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"/>
+  </LinearLayout>				
+  <LinearLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">		
+		
+		<ImageView
+   		android:layout_alignParentBottom="true"
+   		android:layout_alignParentLeft="true"
+   		android:src="@drawable/verso"
+   		android:layout_gravity="left" 
+		android:id="@+id/img6Grid2" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content" />
+		
+		<ImageView
+   		android:layout_alignParentBottom="true"
+   		android:layout_alignParentLeft="true"
+   		android:src="@drawable/verso"
+   		android:layout_gravity="left" 
+		android:id="@+id/img7Grid2" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content" />
+		<ImageView
+   		android:layout_alignParentBottom="true"
+   		android:layout_alignParentLeft="true"
+   		android:src="@drawable/verso"
+   		android:layout_gravity="left" 
+		android:id="@+id/img8Grid2" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"/>
+		<ImageView
+   		android:layout_alignParentBottom="true"
+   		android:layout_alignParentLeft="true"
+   		android:src="@drawable/verso"
+   		android:layout_gravity="left" 
+		android:id="@+id/img9Grid2" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content"/>
+		<ImageView
+   		android:layout_alignParentBottom="true"
+   		android:layout_alignParentLeft="true"
+   		android:src="@drawable/verso"
+   		android:layout_gravity="left" 
+		android:id="@+id/img10Grid2" 
+		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content" />
+		
+    </LinearLayout>		  
+  </TableLayout>
+</ScrollView>	
