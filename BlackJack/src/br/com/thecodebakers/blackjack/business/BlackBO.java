@@ -92,6 +92,8 @@ public class BlackBO {
 	}
 	
 	private void inicializar() {
+		cartaBanca=null ;
+		cartaPlayer=null ;
 		message = null;
     	cartasSorteadas = new ArrayList<Integer>(); 
     }
@@ -114,9 +116,9 @@ public class BlackBO {
     	}
     	if (!inicializado) {
     		novo();
-    		//Toast.makeText(context, R.string.msg_jogo_antes_desistir , Toast.LENGTH_SHORT).show();
-    		text = res.getString(R.string.msg_jogo_antes_desistir);
-    		message = new Message(text);
+    		Toast.makeText(context, R.string.msg_jogo_antes_desistir , Toast.LENGTH_LONG).show();
+    		//text = res.getString(R.string.msg_jogo_antes_desistir);
+    		//message = new Message(text);
     		return;
     	}
     	bancajoga(true);
@@ -165,7 +167,7 @@ public class BlackBO {
     			//Toast.makeText(context,  R.string.msg_vc_perdeu, Toast.LENGTH_SHORT).show();
     			text = res.getString(R.string.msg_vc_perdeu);
         		message = new Message(text);
-        		
+        		this.cartaBanca = null;
     			fim = true;
     		}
     	}
@@ -257,7 +259,7 @@ public class BlackBO {
     		else {
     			// Se ele parou e nós temos mais pontos, então ganhamos
     			if ((somabanca > somaplayer) && direto) {
-    				
+    				this.cartaBanca = null;
     				String msgBanca = res.getString(R.string.msg_banca_ganha_21);
     				String pontos = res.getString(R.string.msg_21_pontos);
     				text = msgBanca + " " + somabanca + " " + pontos;
@@ -276,7 +278,6 @@ public class BlackBO {
     			
     			text = res.getString(R.string.msg_banca_ganhou);
         		message = new Message(text);
-    			
     			fim = true;
     			return;
     		}
