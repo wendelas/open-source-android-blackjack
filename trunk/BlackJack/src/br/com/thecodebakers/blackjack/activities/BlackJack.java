@@ -28,6 +28,9 @@ public class BlackJack extends Activity {
 	private int posicaoCartaPlayer=0;
 	private int somabanca =0;
 	private int somaplayer=0;
+	
+	private Integer cartaBanca ;
+	private Integer cartaPlayer;
 		
 	@Override
     public void onCreate(Bundle savedInstanceState) {
@@ -73,8 +76,8 @@ public class BlackJack extends Activity {
     	Log.d(TAG, "hit Me if u are the player..."); 
     	
     	blackBO.hitme();
-    	Integer cartaBanca = blackBO.getCartaBanca();
-    	Integer cartaPlayer = blackBO.getCartaPlayer() ; 
+    	cartaBanca = blackBO.getCartaBanca();
+    	cartaPlayer = blackBO.getCartaPlayer() ; 
     	    	
     	Log.d(TAG, "imageView cartaPlayer ID" + cartaPlayer);
     	Log.d(TAG, "imageView cartaBanca ID" + cartaBanca);
@@ -92,7 +95,7 @@ public class BlackJack extends Activity {
 			posicaoCartaBanca++;
 			//seta o total de pontos da banca
 			TextView pontosBanca = (TextView) this.findViewById(R.id.textViewPntBanca); 
-			this.somabanca =+ blackBO.getSomabanca();
+			this.somabanca = blackBO.getSomabanca();
 			pontos = String.valueOf( somabanca );
 			pontosBanca.setText(pontos);
 			
@@ -110,7 +113,7 @@ public class BlackJack extends Activity {
 			
 			//seta o total de pontos do jogador
 			TextView pontosPlayer = (TextView) findViewById(R.id.textViewPntSuasCartas); 
-			this.somaplayer =+  blackBO.getSomaplayer();
+			this.somaplayer = blackBO.getSomaplayer();
 			pontos = String.valueOf( somaplayer );
 			pontosPlayer.setText(pontos);
     	}
@@ -124,7 +127,9 @@ public class BlackJack extends Activity {
     
     public void stand (View view) {
     	Log.d(TAG, "stand the game..."); 
+    	
     	blackBO.stand();
+    	
     	if (blackBO.getMessage() != null){
 			this.mensagem (blackBO.getMessage().getText());
 		}
