@@ -30,7 +30,7 @@
     <string name="lblSuas_Cartas">Suas Cartas</string>
     <string name="lblTotal_Pontos">Ponto (s)</string>
     <string name="msg_jogo_acabou">O jogo acabou!</string>
-    <string name="msg_jogo_antes_desistir">Você deve jogar antes de desistir. Clique em \"Hit Me\"!</string>
+    <string name="msg_jogo_antes_desistir">Você deve jogar antes de desistir\n. Clique em \"Hit Me\"!</string>
     <string name="msg_naotem_cartas">Desculpe,\n mas não pode pedir mais cartas!</string>
     <string name="msg_vc_venceu">Você venceu!</string>
     <string name="msg_vc_perdeu">Desculpe,\n você perdeu!</string>
