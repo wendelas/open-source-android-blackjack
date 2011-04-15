@@ -127,8 +127,27 @@ public class BlackJack extends Activity {
     
     public void stand (View view) {
     	Log.d(TAG, "stand the game..."); 
-    	
     	blackBO.stand();
+    	String pontos = null;
+    	TextView pontosBanca = null;
+    	cartaBanca = blackBO.getCartaBanca();
+    	
+    	//Cartas da Banca
+    	if (cartaBanca  != null){
+    		
+    		ImageView imageView = (ImageView) this. findViewById(posicaoCartasBanca[posicaoCartaBanca]);
+	    	imageView.setImageResource(cartaBanca);
+	    	Animation cartaAnim1 = AnimationUtils.loadAnimation(BlackJack.this, R.anim.carta_anim);
+			imageView.setAnimation(cartaAnim1);
+			cartaAnim1.startNow();
+			posicaoCartaBanca++;
+			//seta o total de pontos da banca
+			pontosBanca = (TextView) this.findViewById(R.id.textViewPntBanca); 
+			this.somabanca = blackBO.getSomabanca();
+			pontos = String.valueOf( somabanca );
+			pontosBanca.setText(pontos);
+			
+    	}
     	
     	if (blackBO.getMessage() != null){
 			this.mensagem (blackBO.getMessage().getText());
@@ -147,6 +166,8 @@ public class BlackJack extends Activity {
     	posicaoCartaPlayer=0;
     	somabanca =0;
     	somaplayer=0;
+    	this.cartaBanca=0;
+    	this.cartaPlayer=0;
     	
     	blackBO.novo();
     	Intent i = new Intent(this, BlackJack.class);
