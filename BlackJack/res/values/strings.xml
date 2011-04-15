@@ -6,37 +6,35 @@
     <string name="CODIGO_VERSAO">10000</string>
     <string name="titBlack">Black Jack:</string>
     <string name="lblOK">OK</string>
-    <string name="txtSim">Sim</string>
-    <string name="txtNao">Não</string>
+    <string name="txtSim">Yes</string>
+    <string name="txtNao">No</string>
     <string name="msg_help_1">Black Jack </string>
-    <string name="msg_help_2">Instruções \n
-    						 O objetivo do jogo BlackJack, também conhecido como "21",  
-    						 é fazer um total de pontos próximo ou igual a 21, vencendo assim, seu adversário.  
-    						 No caso do nosso jogo, é a "banca".\n
-    						 O jogo termina quando um dos jogadores completa, ou ultrapassa 21 pontos. \n </string>
-    <string name="msg_hitme">1 - Durante um jogo, clique no botão "Hit Me" para que lhe seja dada uma nova carta.</string>
-    <string name="msg_stand">2 - Se achar que está bom,  clique no botão "Stand" para finalizar o jogo. A banca poderá ou 
-    						 não pedir mais cartas. </string>
-	<string name="msg_novo_jogo">3 - Clique no botão "Novo Jogo" para que sejam zerados os pontos e tudo comece novamente. 
-    						  No início, o jogo dará uma carta para você e outra para a banca.</string>
-    <string name="msg_pontos_cartas1">Pontos das cartas</string>
-    <string name="msg_pontos_cartas2_10">- As cartas de 2 a 10 valem o seu próprio número de pontos.</string>	
-    <string name="msg_pontos_cartas_ases">- Os Ases valem 1 ponto.</string>	
-    <string name="msg_pontos_cartas_coringas">- As cartas de figuras e os coringas, valem 10 pontos.</string>							 
+    <string name="msg_help_2">Instructions \n
+    					     The game\'s objective is to score a total points equal or near 21, beating 
+    					     your adversary, in our game is \"the House\".\n
+    						 Game ends when one of the players (you or The House) reaches 21. \n</string>
+    <string name="msg_hitme">1 - During the game, click the \"Hit Me\" button to get a new card.</string>
+    <string name="msg_stand">2 - If you feel that is close enough to 21, click the \"Stand\" button to end. The House could ask for more cards or not. </string>
+	<string name="msg_novo_jogo">3 - Click the button \"New game\" to begin a new round.
+					          At the beginning, the House will give you a card and get another.</string>
+    <string name="msg_pontos_cartas1">Card\'s points</string>
+    <string name="msg_pontos_cartas2_10">- The cards from 2 to 10 worth their own number.</string>	
+    <string name="msg_pontos_cartas_ases">- Aces worth 1 point.</string>	
+    <string name="msg_pontos_cartas_coringas">- Figures and Jokers worth 10 points.</string>							 
     
-    <string name="mnu_ajuda">Instruções</string>
-    <string name="mnu_titulo_menu">Selecione uma ação</string>
-    <string name="lblCartas_Banca">Cartas da Banca</string>
-    <string name="lblSuas_Cartas">Suas Cartas</string>
-    <string name="lblTotal_Pontos">Ponto (s)</string>
-    <string name="msg_jogo_acabou">O jogo acabou!</string>
-    <string name="msg_jogo_antes_desistir">Você deve jogar antes de desistir. Clique em \"Hit Me\"!</string>
-    <string name="msg_naotem_cartas">Desculpe,\n mas não pode pedir mais cartas!</string>
-    <string name="msg_vc_venceu">Você venceu!</string>
-    <string name="msg_vc_perdeu">Desculpe,\n você perdeu!</string>
-    <string name="msg_banca_ganhou">A banca ganhou!</string>
-    <string name="msg_banca_perdeu">A banca perdeu.</string>
-    <string name="msg_banca_venceu">A banca venceu!</string>
-    <string name="msg_banca_ganha_21">A banca ganha com </string>
-    <string name="msg_21_pontos">pontos</string>
+    <string name="mnu_ajuda">Instructions</string>
+    <string name="mnu_titulo_menu">Select an action</string>
+    <string name="lblCartas_Banca">House\'s cards</string>
+    <string name="lblSuas_Cartas">Your cards</string>
+    <string name="lblTotal_Pontos">Point (s)</string>
+    <string name="msg_jogo_acabou">Game over!</string>
+    <string name="msg_jogo_antes_desistir">You must play before quitting. Click \"Hit Me\"!</string>
+    <string name="msg_naotem_cartas">Sorry, \n but you can\' ask more cards!</string>
+    <string name="msg_vc_venceu">You win!</string>
+    <string name="msg_vc_perdeu">Sorry,\n you lost!</string>
+    <string name="msg_banca_ganhou">House wins!</string>
+    <string name="msg_banca_perdeu">House lost.</string>
+    <string name="msg_banca_venceu">House wins!</string>
+    <string name="msg_banca_ganha_21">House wins with </string>
+    <string name="msg_21_pontos">points</string>
 </resources>
