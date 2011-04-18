@@ -87,7 +87,7 @@ public class BlackJack extends Activity {
     	//Cartas da Banca
     	if (cartaBanca  != null){
     		
-    		ImageView imageView = (ImageView) this. findViewById(posicaoCartasBanca[posicaoCartaBanca]);//R.id.img1Grid1
+    		ImageView imageView = (ImageView) this. findViewById(posicaoCartasBanca[posicaoCartaBanca]);
 	    	imageView.setImageResource(cartaBanca);
 	    	Animation cartaAnim1 = AnimationUtils.loadAnimation(BlackJack.this, R.anim.carta_anim);
 			imageView.setAnimation(cartaAnim1);
@@ -177,20 +177,22 @@ public class BlackJack extends Activity {
     
     //array de inteiros com as imagens das cartas da banca
     private Integer[]  posicaoCartasBanca = {
-	   		 R.id.img1Grid1, R.id.img2Grid1,  R.id.img3Grid1, 
-	   		 R.id.img4Grid1, R.id.img5Grid1,   R.id.img6Grid1, 
-	   		 R.id.img7Grid1, R.id.img8Grid1, R.id.img9Grid1, R.id.img10Grid1
+	   		 R.id.img1Grid1, R.id.img2Grid1, R.id.img3Grid1, 
+	   		 R.id.img4Grid1, R.id.img5Grid1, R.id.img6Grid1, 
+	   		 R.id.img7Grid1, R.id.img8Grid1, R.id.img9Grid1, 
+	   		 R.id.img10Grid1
 	   		 };
 
 	//array de inteiros com as imagens das cartas do jogador
 	private Integer[]  posicaoCartasPlayer = {
-			R.id.img1Grid2, R.id.img2Grid2,  R.id.img3Grid2, 
-	   		 R.id.img4Grid2, R.id.img5Grid2,   R.id.img6Grid2, 
-	   		 R.id.img7Grid2, R.id.img8Grid2, R.id.img9Grid2, R.id.img10Grid2};
+			 R.id.img1Grid2, R.id.img2Grid2, R.id.img3Grid2, 
+	   		 R.id.img4Grid2, R.id.img5Grid2, R.id.img6Grid2, 
+	   		 R.id.img7Grid2, R.id.img8Grid2, R.id.img9Grid2, 
+	   		 R.id.img10Grid2
+	   		 };
 
 	private void mensagem (String texto) {
-    	
-        new AlertDialog.Builder(this).setMessage(texto)
+    	new AlertDialog.Builder(this).setMessage(texto)
         .setNeutralButton("OK", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
             	reloadActivity();
