@@ -1,4 +1,4 @@
-#labels Instruçõesdeuso,Blackjack
+#labels Instruções,Blackjack
 <b>Instruções de uso</b>
 
 O objetivo do jogo de Blackjack, também conhecido como "21", é fazer um total de <br/>pontos próximo ou igual a 21, vencendo, assim, seu adversário. 
