@@ -65,7 +65,7 @@
 				android:layout_height="wrap_content"/>
 				
 		<TextView 
-				android:layout_alignParentRight="true"
+				android:layout_centerInParent="true"
 				android:text="" 
 				android:id="@+id/textViewPntBanca" 
 				style="@style/titulo"
@@ -202,7 +202,7 @@
 				
 		<TextView 
 				android:text=""
-				android:layout_alignParentRight="true"
+				android:layout_centerInParent="true"
 				android:id="@+id/textViewPntSuasCartas" 
 				style="@style/titulo"
 				android:layout_width="wrap_content" 
