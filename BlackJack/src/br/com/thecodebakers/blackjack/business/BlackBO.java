@@ -259,7 +259,7 @@ public class BlackBO {
     		else {
     			// Se ele parou e nós temos mais pontos, então ganhamos
     			if ((somabanca > somaplayer) && direto) {
-    				this.cartaBanca = null;
+    				//this.cartaBanca = null;
     				String msgBanca = res.getString(R.string.msg_banca_ganha_21);
     				String pontos = res.getString(R.string.msg_21_pontos);
     				text = msgBanca + " " + somabanca + " " + pontos;
