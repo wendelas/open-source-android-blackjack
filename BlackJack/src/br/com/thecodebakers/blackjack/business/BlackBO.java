@@ -108,6 +108,7 @@ public class BlackBO {
     public void stand() {
     	Resources res = this.context.getResources();
     	String text = "";
+    	cartaBanca=null ;
     	if (fim) {
     		//Toast.makeText(context, R.string.msg_jogo_acabou , Toast.LENGTH_SHORT).show();
     		text = res.getString(R.string.msg_jogo_acabou);
