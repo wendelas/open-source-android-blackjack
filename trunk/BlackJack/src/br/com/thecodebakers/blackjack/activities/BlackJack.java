@@ -1,5 +1,7 @@
 package br.com.thecodebakers.blackjack.activities;
 
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -130,24 +132,28 @@ public class BlackJack extends Activity {
     	blackBO.stand();
     	String pontos = null;
     	TextView pontosBanca = null;
-    	cartaBanca = blackBO.getCartaBanca();
+    	ArrayList<Integer> cartaBancaStand = blackBO.getCartasSorteadasStand();
     	
     	//Cartas da Banca
-    	if (cartaBanca  != null){
+    	for (Integer cartaStand : cartaBancaStand) {
     		
-    		ImageView imageView = (ImageView) this. findViewById(posicaoCartasBanca[posicaoCartaBanca]);
-	    	imageView.setImageResource(cartaBanca);
-	    	Animation cartaAnim1 = AnimationUtils.loadAnimation(BlackJack.this, R.anim.carta_anim);
-			imageView.setAnimation(cartaAnim1);
-			cartaAnim1.startNow();
-			posicaoCartaBanca++;
-			//seta o total de pontos da banca
-			pontosBanca = (TextView) this.findViewById(R.id.textViewPntBanca); 
-			this.somabanca = blackBO.getSomabanca();
-			pontos = String.valueOf( somabanca );
-			pontosBanca.setText(pontos);
-			
-    	}
+    		if (cartaStand  != null){
+        		ImageView imageView = (ImageView) this. findViewById(posicaoCartasBanca[posicaoCartaBanca]);
+    	    	imageView.setImageResource(cartaStand);
+    	    	Animation cartaAnim1 = AnimationUtils.loadAnimation(BlackJack.this, R.anim.carta_anim);
+    			imageView.setAnimation(cartaAnim1);
+    			cartaAnim1.startNow();
+    			posicaoCartaBanca++;
+    			//seta o total de pontos da banca
+    			pontosBanca = (TextView) this.findViewById(R.id.textViewPntBanca); 
+    			this.somabanca = blackBO.getSomabanca();
+    			pontos = String.valueOf( somabanca );
+    			pontosBanca.setText(pontos);
+    			
+        	}
+        	
+		}
+    	
     	
     	if (blackBO.getMessage() != null){
 			this.mensagem (blackBO.getMessage().getText());

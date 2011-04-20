@@ -25,10 +25,14 @@ public class BlackBO {
 	private boolean fim = false;
 	private boolean inicializado = false;
 	
-	private ArrayList <Integer> cartasSorteadas ;
+	private ArrayList <Integer> cartasSorteadasPlayer ;
+	private ArrayList <Integer> cartasSorteadasBanca ;
 	
 	private Integer cartaBanca ;
 	private Integer cartaPlayer;
+	
+	//array para armazenar os dados do stand
+	private ArrayList <Integer> cartasSorteadasStand;
 	
 	//array de strings para contabilizar os pontos das cartas
 	private String [] cartasStr = {
@@ -95,7 +99,9 @@ public class BlackBO {
 		cartaBanca=null ;
 		cartaPlayer=null ;
 		message = null;
-    	cartasSorteadas = new ArrayList<Integer>(); 
+    	cartasSorteadasPlayer = new ArrayList<Integer>(); 
+    	cartasSorteadasBanca = new ArrayList<Integer>();
+    	cartasSorteadasStand = new ArrayList<Integer>();
     }
    
 	private int aleatorio(int inferior, int superior){
@@ -109,8 +115,9 @@ public class BlackBO {
     	Resources res = this.context.getResources();
     	String text = "";
     	cartaBanca=null ;
+    	cartasSorteadasStand = new ArrayList<Integer>();
+    	
     	if (fim) {
-    		//Toast.makeText(context, R.string.msg_jogo_acabou , Toast.LENGTH_SHORT).show();
     		text = res.getString(R.string.msg_jogo_acabou);
     		message = new Message(text);
     		return;
@@ -118,8 +125,6 @@ public class BlackBO {
     	if (!inicializado) {
     		novo();
     		Toast.makeText(context, R.string.msg_jogo_antes_desistir , Toast.LENGTH_LONG).show();
-    		//text = res.getString(R.string.msg_jogo_antes_desistir);
-    		//message = new Message(text);
     		return;
     	}
     	bancajoga(true);
@@ -188,9 +193,9 @@ public class BlackBO {
     		carta = aleatorio(1, cartas.length);
     		carta = carta - 1;
     		
-    		for (Iterator<Integer> iterator = cartasSorteadas.iterator(); iterator.hasNext();) {
+    		for (Iterator<Integer> iterator = cartasSorteadasPlayer.iterator(); iterator.hasNext();) {
 				Integer cartaSorteada = (Integer) iterator.next();
-				if (carta == cartaSorteada) {
+				if (carta == cartaSorteada.intValue()) {
     				igual = true;
     				break;
     			}
@@ -200,7 +205,7 @@ public class BlackBO {
     	
     	pontos = verpontos(carta);
     	somaplayer = somaplayer + pontos;
-    	cartasSorteadas.add(carta);
+    	cartasSorteadasPlayer.add(carta);
     	
     	return carta;	
     }
@@ -213,19 +218,19 @@ public class BlackBO {
     		igual = false;
     		carta = aleatorio(1, cartas.length);
     		carta = carta - 1;
-    		for (Iterator<Integer> iterator = cartasSorteadas.iterator(); iterator.hasNext();) {
+    		for (Iterator<Integer> iterator = cartasSorteadasBanca.iterator(); iterator.hasNext();) {
 				Integer cartaSorteada = (Integer) iterator.next();
-				if (carta == cartaSorteada) {
-    				igual = true;
-    				break;
-    			}
+				if (carta == cartaSorteada.intValue()) {
+	    			igual = true;
+	    			break;
+	    		}
 			}
     		
     	}
     	
     	pontos = verpontos(carta);
     	somabanca = somabanca +  pontos;
-    	cartasSorteadas.add(carta);
+    	cartasSorteadasBanca.add(carta);
     	
     	return carta;	
     }
@@ -302,13 +307,12 @@ public class BlackBO {
     	indicebanca++;
     	int carta = sorteiobanca();
     	cartaBanca = cartas[carta];
-    	
+    	cartasSorteadasStand.add(cartaBanca);
     	Resources res = this.context.getResources();
     	
     	if (somabanca == 21) {
-    	   //Toast.makeText(context,R.string.msg_banca_venceu , Toast.LENGTH_SHORT).show();
     	   String text = res.getString(R.string.msg_banca_venceu);
-   		   message = new Message(text);
+    	   message = new Message(text);
 			   
     	}
     	
@@ -381,6 +385,14 @@ public class BlackBO {
 
 	public void setMessage(Message message) {
 		message = message;
+	}
+
+	public ArrayList<Integer> getCartasSorteadasStand() {
+		return cartasSorteadasStand;
+	}
+
+	public void setCartasSorteadasStand(ArrayList<Integer> cartasSorteadasStand) {
+		this.cartasSorteadasStand = cartasSorteadasStand;
 	}
 	
 }
