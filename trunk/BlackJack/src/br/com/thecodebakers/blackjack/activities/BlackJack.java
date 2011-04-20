@@ -1,3 +1,24 @@
+/*
+ * Copyright (C) 2011 The Code Bakers
+ * Authors: Cleuton Sampaio e Francisco Rodrigues
+ * e-mail: thecodebakers@gmail.com
+ * Project: https://code.google.com/p/open-source-android-blackjack/
+ * Site: http://thecodebakers.blogspot.com
+ *
+ * Licensed under the GNU GPL, Version 3.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://gplv3.fsf.org/
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * 
+ * @author Cleuton Sampaio e Francisco Rogrigues - thecodebakers@gmail.com
+ */
 package br.com.thecodebakers.blackjack.activities;
 
 import java.util.ArrayList;
@@ -21,16 +42,13 @@ import br.com.thecodebakers.blackjack.business.BlackBO;
 
 public class BlackJack extends Activity {
 	
-	private Animation cartaAnim;
-	private Animation cartaAnim2;
-	
 	private BlackBO blackBO;
 	private static final String TAG = "BlackJack";
+	
 	private int posicaoCartaBanca=0;
 	private int posicaoCartaPlayer=0;
 	private int somabanca =0;
 	private int somaplayer=0;
-	
 	private Integer cartaBanca ;
 	private Integer cartaPlayer;
 		
@@ -39,10 +57,10 @@ public class BlackJack extends Activity {
         
 		super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        
+        /*
         cartaAnim = AnimationUtils.loadAnimation(BlackJack.this, R.anim.carta_anim);
         cartaAnim2 = AnimationUtils.loadAnimation(BlackJack.this, R.anim.carta_anim2);
-        /*
+        
         //imageAdapter = new ImageAdapter(this);
         //galeria de imagens 2
         gridview2 = (GridView) findViewById(R.id.gridview2);
@@ -73,7 +91,10 @@ public class BlackJack extends Activity {
 	public void onBackPressed() {
 		moveTaskToBack(true);
 	}
-   
+    /**
+     * button hitme
+     * @param view
+     */
     public void hitMe (View view) {
     	Log.d(TAG, "hit Me if u are the player..."); 
     	
@@ -95,6 +116,7 @@ public class BlackJack extends Activity {
 			imageView.setAnimation(cartaAnim1);
 			cartaAnim1.startNow();
 			posicaoCartaBanca++;
+			
 			//seta o total de pontos da banca
 			TextView pontosBanca = (TextView) this.findViewById(R.id.textViewPntBanca); 
 			this.somabanca = blackBO.getSomabanca();
@@ -126,7 +148,10 @@ public class BlackJack extends Activity {
     	Log.d(TAG, "End of hitMe ");
     	
 	}
-    
+    /**
+     * Button stand
+     * @param view
+     */
     public void stand (View view) {
     	Log.d(TAG, "stand the game..."); 
     	blackBO.stand();
@@ -153,17 +178,20 @@ public class BlackJack extends Activity {
         	}
         	
 		}
-    	
-    	
+    	    	
     	if (blackBO.getMessage() != null){
 			this.mensagem (blackBO.getMessage().getText());
 		}
 	}
     
+    /**
+     * button new game
+     * @param view
+     */
     public void novoJogo (View view) {
     	Log.d(TAG, "starting new game...");
     	reloadActivity();
-    	Log.d(TAG, "new game."); 
+    	Log.d(TAG, "game started."); 
 	}
     
     private void reloadActivity(){
@@ -187,7 +215,7 @@ public class BlackJack extends Activity {
 	   		 R.id.img4Grid1, R.id.img5Grid1, R.id.img6Grid1, 
 	   		 R.id.img7Grid1, R.id.img8Grid1, R.id.img9Grid1, 
 	   		 R.id.img10Grid1
-	   		 };
+    };
 
 	//array de inteiros com as imagens das cartas do jogador
 	private Integer[]  posicaoCartasPlayer = {
@@ -195,7 +223,7 @@ public class BlackJack extends Activity {
 	   		 R.id.img4Grid2, R.id.img5Grid2, R.id.img6Grid2, 
 	   		 R.id.img7Grid2, R.id.img8Grid2, R.id.img9Grid2, 
 	   		 R.id.img10Grid2
-	   		 };
+	};
 
 	private void mensagem (String texto) {
     	new AlertDialog.Builder(this).setMessage(texto)
