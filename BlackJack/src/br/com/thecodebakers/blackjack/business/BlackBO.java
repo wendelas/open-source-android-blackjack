@@ -1,3 +1,25 @@
+/*
+ * Copyright (C) 2011 The Code Bakers
+ * Authors: Cleuton Sampaio e Francisco Rodrigues
+ * e-mail: thecodebakers@gmail.com
+ * Project: https://code.google.com/p/open-source-android-blackjack/
+ * Site: http://thecodebakers.blogspot.com
+ *
+ * Licensed under the GNU GPL, Version 3.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://gplv3.fsf.org/
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ * 
+ * @author Cleuton Sampaio e Francisco Rogrigues - thecodebakers@gmail.com
+ */
+
 package br.com.thecodebakers.blackjack.business;
 
 import java.util.ArrayList;
@@ -10,6 +32,14 @@ import android.widget.Toast;
 import br.com.thecodebakers.blackjack.R;
 import br.com.thecodebakers.blackjack.model.Message;
 
+/**
+ * Classe com as regras de negócio do game.<br/>
+ * 
+ * Class with the business rules of the game.
+ * 
+ * @author Cleuton Sampaio e Francisco Rogrigues - thecodebakers@gmail.com
+ *
+ */
 public class BlackBO {
 	
 	private Message message = null;
@@ -31,10 +61,10 @@ public class BlackBO {
 	private Integer cartaBanca ;
 	private Integer cartaPlayer;
 	
-	//array para armazenar os dados do stand
+	//lista para armazenar os dados do stand
 	private ArrayList <Integer> cartasSorteadasStand;
 	
-	//array de strings para contabilizar os pontos das cartas
+	//array de strings para contar os pontos das cartas
 	private String [] cartasStr = {
 			"as_copas.png", 	      "nove_copas.png", 	  "rei_ouros.png", 
 			"as_espadas.png", 	      "nove_espadas.png", 	  "rei_paus.png", 
@@ -56,7 +86,7 @@ public class BlackBO {
 			"dois_paus.png", 	      "rei_espadas.png" 	 
 			};
 	
-	//array de inteiros com as imagens das cartas, para ref tela
+	//array de inteiros com as imagens das cartas para a tela
 	private Integer[]  cartas = {
     		 R.drawable.as_copas, 		  R.drawable.nove_copas,     R.drawable.rei_ouros, 
     		 R.drawable.as_espadas, 	  R.drawable.nove_espadas,   R.drawable.rei_paus, 
@@ -376,7 +406,7 @@ public class BlackBO {
 	}
 
 	public void setMessage(Message message) {
-		message = message;
+		this.message = message;
 	}
 
 	public ArrayList<Integer> getCartasSorteadasStand() {
