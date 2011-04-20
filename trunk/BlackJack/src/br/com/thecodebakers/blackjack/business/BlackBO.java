@@ -146,7 +146,6 @@ public class BlackBO {
     	Resources res = this.context.getResources();
     	String text = "";
     	if (fim) {
-    		//Toast.makeText(context, R.string.msg_jogo_acabou, Toast.LENGTH_SHORT).show();
     		text = res.getString(R.string.msg_jogo_acabou);
     		message = new Message(text);
     		return ;
@@ -165,12 +164,10 @@ public class BlackBO {
     		cartaPlayer = cartas[carta];
             
     		if (somaplayer == 21) {
-    			//Toast.makeText(context,  R.string.msg_vc_venceu, Toast.LENGTH_SHORT).show();
     			text = res.getString(R.string.msg_vc_venceu);
         		message = new Message(text);
     			fim = true;
     		}else if (somaplayer > 21) {
-    			//Toast.makeText(context,  R.string.msg_vc_perdeu, Toast.LENGTH_SHORT).show();
     			text = res.getString(R.string.msg_vc_perdeu);
         		message = new Message(text);
         		this.cartaBanca = null;
@@ -265,7 +262,6 @@ public class BlackBO {
     		else {
     			// Se ele parou e nós temos mais pontos, então ganhamos
     			if ((somabanca > somaplayer) && direto) {
-    				//this.cartaBanca = null;
     				String msgBanca = res.getString(R.string.msg_banca_ganha_21);
     				String pontos = res.getString(R.string.msg_21_pontos);
     				text = msgBanca + " " + somabanca + " " + pontos;
@@ -279,9 +275,6 @@ public class BlackBO {
     		
     		// Se jogamos, temos que saber o resultado
     		if (somabanca == 21) {
-    			//Toast.makeText(context,R.string.msg_banca_ganhou , 
-    			//								Toast.LENGTH_SHORT).show();
-    			
     			text = res.getString(R.string.msg_banca_ganhou);
         		message = new Message(text);
     			fim = true;
@@ -289,8 +282,7 @@ public class BlackBO {
     		}
     		else {
     			if (somabanca > 21) {
-    			   //Toast.makeText(context, R.string.msg_banca_perdeu , 
-    			   //		   				     Toast.LENGTH_SHORT).show();
+    			   
     			   text = res.getString(R.string.msg_banca_perdeu);
            		   message = new Message(text);
        			   
