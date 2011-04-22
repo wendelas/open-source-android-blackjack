@@ -27,6 +27,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -51,6 +52,8 @@ public class BlackJack extends Activity {
 	private int somaplayer=0;
 	private Integer cartaBanca ;
 	private Integer cartaPlayer;
+	private boolean som=true;
+	private MediaPlayer media = null;
 		
 	@Override
     public void onCreate(Bundle savedInstanceState) {
@@ -77,7 +80,13 @@ public class BlackJack extends Activity {
 				}
 			}
 		});*/
-       
+        try{
+        	media = MediaPlayer.create(this.getApplicationContext(), R.raw.audio);
+        	media.start();
+        }catch  (Exception e){
+        	e.printStackTrace();
+        }
+        
         blackBO = BlackBO.getInstance(this.getApplicationContext());
                
     }
@@ -253,4 +262,30 @@ public class BlackJack extends Activity {
 		default: return super.onOptionsItemSelected(item); 
 		}
 	}
+	
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		if (media != null) {
+			if (media.isPlaying()) {
+				media.pause();
+			}
+		}
+		Log.d(TAG, "pause the sound.");
+	}
+	
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		if (media != null) {
+			if (!media.isPlaying()) {
+				media.start();
+			}
+		}	
+		Log.d(TAG, "play the sound.");
+	}
+	
+	
 }
