@@ -60,26 +60,7 @@ public class BlackJack extends Activity {
         
 		super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        /*
-        cartaAnim = AnimationUtils.loadAnimation(BlackJack.this, R.anim.carta_anim);
-        cartaAnim2 = AnimationUtils.loadAnimation(BlackJack.this, R.anim.carta_anim2);
-        
-        //imageAdapter = new ImageAdapter(this);
-        //galeria de imagens 2
-        gridview2 = (GridView) findViewById(R.id.gridview2);
-        gridview2.setAdapter(imageAdapter);
-        gridview2.setOnItemClickListener(new OnItemClickListener() {
-			public void onItemClick(AdapterView<?> arg0, View v, int position,long id){
-				
-				if (v instanceof ImageView){
-					ImageView imageView = (ImageView) v;
-					imageView.setImageResource(cartas[position]);
-					Animation scaleAnim = AnimationUtils.loadAnimation(BlackJack.this, R.anim.carta_anim);
-					imageView.setAnimation(scaleAnim);
-					scaleAnim.startNow();
-				}
-			}
-		});*/
+       
         try{
         	media = MediaPlayer.create(this.getApplicationContext(), R.raw.audio);
         	media.start();
