@@ -33,6 +33,20 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
  
+ 	<!-- We need some cash, man! -->
+ 	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+  		<com.google.ads.AdView android:id="@+id/adView"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         ads:adUnitId="[SEU ID]"
+                         ads:adSize="BANNER"
+                         ads:loadAdOnCreate="true"/>
+	</LinearLayout>
+ 
    <RelativeLayout
 		  xmlns:android="http://schemas.android.com/apk/res/android"
 		  android:layout_width="wrap_content"
@@ -329,6 +343,11 @@
 		android:layout_height="wrap_content" 
 		android:layout_width="wrap_content" />
 		
-    </LinearLayout>		  
+    </LinearLayout>		
+
+
+
   </TableLayout>
+
+  
 </ScrollView>	

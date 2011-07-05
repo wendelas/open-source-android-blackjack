@@ -23,6 +23,9 @@ package br.com.thecodebakers.blackjack.activities;
 
 import java.util.ArrayList;
 
+import com.google.ads.AdRequest;
+import com.google.ads.AdView;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -69,6 +72,9 @@ public class BlackJack extends Activity {
         }
         
         blackBO = BlackBO.getInstance(this.getApplicationContext());
+        AdView adView = (AdView)this.findViewById(R.id.adView);
+        adView.loadAd(new AdRequest());
+
                
     }
 	
